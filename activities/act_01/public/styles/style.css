@@ -1,31 +1,33 @@
+/* Importing fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Geral configure */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: #222;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #222;
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* <main/> component style */
 main {
   width: fit-content;
   height: fit-content;
   padding: 20px;
   border-radius: 10px;
-  background-color: #fff;
-  color: #222;
   overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 main #forms_title {
@@ -34,6 +36,13 @@ main #forms_title {
   font-weight: bold;
   margin-bottom: 20px;
   user-select: none;
+}
+
+main .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 30px;
 }
 
 main .text_input {
@@ -62,13 +71,6 @@ main #main_btn {
   font-size: 30px;
   color: #fff;
   cursor: pointer;
-}
-
-main .content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  gap: 30px;
 }
 
 main #result {

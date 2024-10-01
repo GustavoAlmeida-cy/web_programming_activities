@@ -1,20 +1,26 @@
+<!-- [ Activity Title ] -->
+<!-- 1) Faça um script que receba um número inteiro e mostre se esse número é par ou ímpar. Leia o número em um campo de texto e mostre a saída em outro campo de texto ou textarea. (0,1 ponto) -->
 <!DOCTYPE html>
 <html lang="en">
-  <!-- 1) Faça um script que receba um número inteiro e mostre se esse número é par ou ímpar. Leia o número em um campo de texto e mostre a saída em outro campo de texto ou textarea. (0,1 ponto) -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🤓 WEB Programming | Activity 1</title>
+    <!-- Links & Scripts -->
     <link rel="stylesheet" href="./styles/style.css" />
     <script defer src="./scripts/script.js"></script>
   </head>
   <body>
+    <!-- Main component -->
     <main>
       <form action="get">
+        <!-- Forms title -->
         <label for="number_input" id="forms_title"
           >| Even or Odd - Guesser 🤓</label
         >
+        <!-- <div/> for organize components -->
         <div class="content">
+          <!-- Input text that receives data -->
           <input
             required
             type="text"
@@ -23,7 +29,9 @@
             class="text_input"
             placeholder="7..."
           />
+          <!-- Button for execute the code -->
           <button id="main_btn" type="button">Guess!</button>
+          <!-- Input text that only show data -->
           <input
             onfocus="loseFocus()"
             readonly
