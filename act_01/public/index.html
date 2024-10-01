@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 1) Faça um script que receba um número inteiro e mostre se esse número é par ou ímpar. Leia o número em um campo de texto e mostre a saída em outro campo de texto ou textarea. (0,1 ponto) -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤓 WEB Programming | Activity 1</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./scripts/script.js"></script>
+  </head>
+  <body>
+    <main>
+      <form action="get">
+        <label for="number_input" id="forms_title"
+          >| Even or Odd - Guesser 🤓</label
+        >
+        <div class="content">
+          <input
+            required
+            type="text"
+            name="number_input"
+            id="number_input"
+            class="text_input"
+            placeholder="7..."
+          />
+          <button id="main_btn" type="button">Guess!</button>
+          <input
+            onfocus="loseFocus()"
+            readonly
+            type="text"
+            name="result"
+            id="result"
+            class="text_input"
+            placeholder="?..."
+          />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
