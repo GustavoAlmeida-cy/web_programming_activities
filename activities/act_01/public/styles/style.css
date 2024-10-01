@@ -20,7 +20,47 @@ body {
   align-items: center;
 }
 
-/* <main/> component style */
+/* Navegation menu style */
+#nav_menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav_menu #theme_btn {
+  display: block;
+  padding: 5px 10px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid gold;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Credits footer style */
+#credits_footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main component style */
 main {
   width: fit-content;
   height: fit-content;
@@ -30,7 +70,7 @@ main {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-main #forms_title {
+#forms_title {
   display: block;
   font-size: 40px;
   font-weight: bold;
@@ -47,32 +87,22 @@ main .content {
 
 main .text_input {
   display: block;
-  margin-bottom: 20px;
   padding: 5px 10px;
   width: 8rem;
   height: 8rem;
   border: 3px solid #222;
   border-radius: 10px;
-  font-size: 50px;
-  text-align: center;
-}
-
-main #main_btn {
-  display: block;
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 5px 10px;
-  width: 8rem;
-  height: 8rem;
-  background-color: rgb(250, 50, 50);
-  border: 3px solid #222;
-  border-radius: 10px;
+  font-size: 35px;
   font-weight: bolder;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
+  text-align: center;
 }
 
-main #result {
+#main_btn {
+  cursor: pointer;
+  background-color: rgb(250, 50, 50);
+  color: #fff;
+}
+
+#result {
   user-select: none;
 }

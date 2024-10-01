@@ -5,12 +5,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🤓 WEB Programming | Activity 1</title>
+    <title>Web Programming</title>
     <!-- Links & Scripts -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/style.css" />
     <script defer src="./scripts/script.js"></script>
   </head>
   <body>
+    <!-- Navegation menu -->
+    <nav id="nav_menu">
+      <h1>Web Programming Activity - 01</h1>
+      <button id="theme_btn"></button>
+    </nav>
     <!-- Main component -->
     <main>
       <form action="get">
@@ -30,7 +36,14 @@
             placeholder="7..."
           />
           <!-- Button for execute the code -->
-          <button id="main_btn" type="button">Guess!</button>
+          <button
+            id="main_btn"
+            class="text_input"
+            type="button"
+            onclick="guess()"
+          >
+            Guess!
+          </button>
           <!-- Input text that only show data -->
           <input
             onfocus="loseFocus()"
@@ -44,5 +57,14 @@
         </div>
       </form>
     </main>
+    <!-- Footer of credits -->
+    <footer id="credits_footer">
+      <a
+        id="credits_link"
+        target="_blank"
+        href="https://github.com/GustavoAlmeida-cy"
+        >&copy Gustavo Almeida - GitHub.</a
+      >
+    </footer>
   </body>
 </html>
