@@ -1,12 +1,20 @@
 // Getting elements
+let theme_btn = document.getElementById("theme_btn");
 let num_input = document.getElementById("number_input");
 let main_btn = document.getElementById("main_btn");
 let result = document.getElementById("result");
 
 // Functions
+
+// Add an event of click to the theme button to change the theme
+theme_btn.addEventListener("click", (e) => {
+  document.body.classList.toggle("dark_theme");
+});
+
 function loseFocus() {
   // Function that prevents user to focus on an input tag with the keyboard.
-  document.getElementById("result").blur();
+  result.blur();
+  main_btn.blur();
 }
 
 function guess(num) {
@@ -16,6 +24,8 @@ function guess(num) {
 
   // Check if the input value is valid.
   if (num === " " || num === "" || isNaN(num)) {
+    num_input.value = "";
+    result.value = "";
     return window.alert("Invalid value!");
   } else {
     // Make the calculation to know the guess result.
