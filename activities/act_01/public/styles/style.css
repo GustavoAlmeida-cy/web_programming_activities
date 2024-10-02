@@ -7,6 +7,7 @@
   --secondary-color: #222;
 }
 
+/* Dark theme style */
 .dark_theme {
   --primary-color: #222;
   --secondary-color: #fff;
@@ -47,8 +48,8 @@
 
 body {
   transition: all 0.3s ease, color 0.3s ease;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -67,18 +68,56 @@ body {
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-#nav_menu #theme_btn {
-  display: block;
-  padding: 5px 10px;
+/* Theme button style */
+#theme_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
   border: 3px solid var(--secondary-color);
   background-color: var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
+  overflow: hidden;
+}
+
+#theme_checkbox {
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+/* Theme button icons style */
+.sun {
+  position: absolute;
+  font-size: 30px;
+  color: var(--secondary-color);
+  background: none;
+  transform: scale(0);
+  transition: 0.4s ease;
+}
+
+.moon {
+  font-size: 30px;
+  background: none;
+  color: var(--secondary-color);
+  transition: 0.4s ease;
+  transition-delay: 0.1s;
+}
+
+/* Theme button icons animation */
+#theme_checkbox:checked ~ .sun {
+  transition-delay: 0.1s;
+  transform: scale(1) rotate(360deg);
+}
+
+#theme_checkbox:checked ~ .moon {
+  transition-delay: 0.1s;
+  transform: rotate(360deg) scale(0);
 }
 
 /* Credits footer style */
