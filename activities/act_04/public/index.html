@@ -1,0 +1,105 @@
+<!-- [ Activity Title ] -->
+<!-- 4) Elabore um script que leia o valor (preço) de um produto e a condição de pagamento conforme tabela abaixo. Exiba ao final do script, o valor real do produto e o valor a ser pago (conforme tabela), leia os valores por meio de um formulário e mostre as mensagens em campos de texto do form. (0,1 ponto) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Programming</title>
+    <!-- Links & Scripts -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./scripts/script.js"></script>
+    <!-- Icons scripts -->
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Navegation menu -->
+    <nav id="nav_menu">
+      <h1>Web Programming Activity - 04</h1>
+      <!-- Theme button -->
+      <label for="theme_checkbox" id="theme_btn">
+        <input type="checkbox" id="theme_checkbox" />
+        <ion-icon name="sunny" class="sun"></ion-icon>
+        <ion-icon name="moon" class="moon"></ion-icon>
+      </label>
+    </nav>
+    <!-- Main component -->
+    <main>
+      <form action="get">
+        <!-- Forms title -->
+        <label for="number_input" id="forms_title"
+          >| Disconts table - Prices 🤓</label
+        >
+        <!-- <div/> for organize components -->
+        <div class="content">
+          <div class="content-wrapper">
+            <label for="number_input" class="input_titles"
+              >| First number:
+            </label>
+            <!-- Input text that receives data -->
+            <input
+              required
+              type="text"
+              name="number_input"
+              id="first_number_input"
+              class="text_input"
+              placeholder="7m..."
+            />
+            <!-- Input text that receives data -->
+            <label for="number_input" class="input_titles"
+              >| Payment methods:
+            </label>
+            <input
+              required
+              type="checkbox"
+              name="number_input"
+              id="second_number_input"
+              class="text_input"
+            />
+            <!-- Button for execute the code -->
+            <button
+              id="main_btn"
+              class="text_input"
+              type="button"
+              readonly
+              onclick="calc_rect_area()"
+              onfocus="loseFocus()"
+            >
+              Calculate!
+            </button>
+          </div>
+          <!-- Input text that only show data -->
+          <label for="number_input" class="input_titles">| Result: </label>
+          <input
+            readonly
+            onfocus="loseFocus()"
+            type="text"
+            name="result"
+            id="result"
+            class="text_input rainbow"
+            placeholder="?m²..."
+          />
+        </div>
+      </form>
+    </main>
+    <!-- Footer of credits -->
+    <footer id="credits_footer">
+      <a
+        id="credits_link"
+        target="_blank"
+        href="https://github.com/GustavoAlmeida-cy"
+        >&copy Gustavo Almeida - GitHub.</a
+      >
+    </footer>
+  </body>
+</html>
